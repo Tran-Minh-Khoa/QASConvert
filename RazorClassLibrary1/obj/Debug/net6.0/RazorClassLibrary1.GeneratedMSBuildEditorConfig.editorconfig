@@ -1,0 +1,43 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = RazorClassLibrary1
+build_property.RootNamespace = RazorClassLibrary1
+build_property.ProjectDir = C:\Users\Asus\source\repos\RazorClassLibrary1\RazorClassLibrary1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Asus\source\repos\RazorClassLibrary1\RazorClassLibrary1
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Asus/source/repos/RazorClassLibrary1/RazorClassLibrary1/Components/MemoEditAutoSizeWithLibrary.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNZW1vRWRpdEF1dG9TaXplV2l0aExpYnJhcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/source/repos/RazorClassLibrary1/RazorClassLibrary1/Components/UcDocGenericExam.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVY0RvY0dlbmVyaWNFeGFtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/source/repos/RazorClassLibrary1/RazorClassLibrary1/Components/UcLichSuDonThuoc.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVY0xpY2hTdURvblRodW9jLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/source/repos/RazorClassLibrary1/RazorClassLibrary1/Components/UcVitalSignBilingual.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVY1ZpdGFsU2lnbkJpbGluZ3VhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/source/repos/RazorClassLibrary1/RazorClassLibrary1/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/source/repos/RazorClassLibrary1/RazorClassLibrary1/Component1.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50MS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-9hms91upey

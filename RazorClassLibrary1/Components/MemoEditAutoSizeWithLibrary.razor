@@ -1,0 +1,17 @@
+﻿@using DevExpress.Blazor
+@using System.Drawing
+
+<style>
+    .my-style {
+        background-color: gray;
+        margin-left: 2px;
+        border: 0px;
+
+    }
+</style>
+
+<div class="memo-edit-auto-size-with-library d-flex align-items-center bg-gray-200 p-2">
+    <DxMemo Enabled="@Enabled" CssClass="w-100 me-2 "  />
+    <DxButton CssClass=" ms-2" class="my-style"  Text="..." />
+</div>
+@code { }

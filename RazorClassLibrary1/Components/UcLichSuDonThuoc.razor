@@ -1,0 +1,32 @@
+﻿@using DevExpress.Blazor
+<style>
+   .my-style-button {
+        background-color: gray;
+        margin-left: 2px;
+        border: 0px;
+    }
+    .fit-width {
+        width: 20px;
+        height: 20px;
+    }
+    .panel-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Tùy chọn: Căn giữa các nút theo chiều ngang */
+        gap: 5px; /* Tùy chọn: Khoảng cách giữa các nút */
+    }
+</style>
+<div class="table-layout-panel d-flex align-items-center bg-gray-200 p-2">
+    <DxMemo Enabled="@Enabled" CssClass="w-100 h-100 me-2" />
+    <div class="panel-container">
+        <DxButton class="my-style-button"  ToolTip="Lấy thông tin nhanh"  >  
+            <img class="fit-width" src="images/pill.png" />
+        </DxButton>
+        <DxButton class="my-style-button"  ToolTip="Xem chi tiết"  >
+             <img class="fit-width" src="images/pill.png" />
+         </DxButton>
+    </div>
+</div>
+@code {
+
+}

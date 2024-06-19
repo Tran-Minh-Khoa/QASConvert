@@ -1,0 +1,90 @@
+﻿@using DevExpress.Blazor;
+<style>
+    .flow-layout-panel {
+        display: flex;
+        flex-wrap: wrap; /* Giúp các panel xuống dòng khi không đủ chỗ */
+        gap: 1rem; /* Khoảng cách giữa các panel */
+    }
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        /* Khoảng cách giữa các phần tử bên trong mỗi panel */
+        /*       border: 1px solid #ccc; /* Thêm viền cho dễ nhìn (tuỳ chọn) */
+        padding: 1rem; /* Thêm padding cho các panel (tuỳ chọn) */
+    }
+
+    .color-gay {
+        color: rgb(78, 153, 164);
+    }
+
+    .color-binh-thuong {
+        color: rgb(98, 192, 205);
+    }
+
+    .color-hoi-beo {
+        color: rgb(245, 195, 70);
+    }
+
+    .color-beo-phi-1 {
+        color: rgb(243, 163, 68);
+    }
+
+    .color-beo-phi-2 {
+        color: rgb(228, 107, 104);
+    }
+
+    .color-beo-phi-3 {
+        color: rgb(182, 85, 83);
+    }
+</style>
+<div class="flow-layout-panel">
+    <div class="form-group">
+        <label for="pulse">Mạch/ Pulse</label>
+        <DxTextBox @bind-Text="@Pulse" Id="pulse" />
+        <span>lần/phút (Bpm)</span>
+    </div>
+    <div class="form-group">
+        <label for="temperature">Nhiệt độ/ Temperature</label>
+        <DxTextBox @bind-Text="@Temperature" Id="temperature" />
+        <span>°C</span>
+    </div>
+    <div class="form-group">
+        <label for="bloodPressure">Huyết áp/ B.P</label>
+        <DxTextBox @bind-Text="@BloodPressure" Id="bloodPressure" />
+        <span>mmHg</span>
+    </div>
+    <div class="form-group">
+        <label for="breath">Nhịp thở/ Breathing Rate</label>
+        <DxTextBox @bind-Text="@Breath" Id="breath" />
+        <span>lần/phút</span>
+    </div>
+    <div class="form-group">
+        <label for="height">Chiều cao/ Height</label>
+        <DxTextBox @bind-Text="@Height" @oninput="OnHeightChanged" Id="height" />
+        <span>cm</span>
+    </div>
+    <div class="form-group">
+        <label for="weight">Cân nặng/ Weight</label>
+        <DxTextBox @bind-Text="@Weight" @oninput="OnWeightChanged" Id="weight" />
+        <span>kg</span>
+    </div>
+
+    @* <DxLabelControl AllowHtmlString="true" Text="@BMIText" />
+    <DxLabelControl AllowHtmlString="true" Text="Kg/m2" /> *@
+</div>
+<div class="form-group">
+    @*     <label style="align-items:center;text-align:center" Id="bmiLabel">BMI</label>
+    *@    @* <DxTextBox Enabled="false" Id="bmiValue" Text="@BMIText" /> *@
+    <span id="bmiValue"> BMI: <b class="@ColorArgb">  @(BMI) @(NutritionalClassification)</b></span>
+</div>
+@code {
+    // public string Pulse { get; set; }
+    // public string Temperature { get; set; }
+    // public string BloodPressure { get; set; }
+    // public string Breath { get; set; }
+    // public string Height { get; set; }
+    // public string Weight { get; set; }
+    // public string BMIText { get; set; }
+}

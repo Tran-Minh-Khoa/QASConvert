@@ -1,0 +1,114 @@
+﻿@using DevExpress.Blazor;
+@* 
+
+@using QA.KetQuaCLS
+@using QA.RX.PrescriptionHistory
+@using QA.VitalSign 
+@using QASBlazor.DocGenericExam.Components.MemoEditAutoSizeWithLibrary *@
+@inherits QADocument.QAPatientDocument
+<style>
+    .bold-text {
+        font-weight: bold;
+        margin-top:10px;
+    }
+    .panel {
+        display: flex;
+        align-items: center;
+        gap: 1rem; 
+        /* Khoảng cách giữa các phần tử bên trong mỗi panel */
+/*       border: 1px solid #ccc; /* Thêm viền cho dễ nhìn (tuỳ chọn) */   
+        padding: 1rem; /* Thêm padding cho các panel (tuỳ chọn) */
+    }
+</style>
+
+<div class="xtra-scrollable-control">
+    <h4 class="bold-text">I. HÀNH CHÍNH/ PATIENT INFORMATION</h4>
+     <div class="flow-layout-panel">
+            <div class="label-group">
+                
+            <span>Phòng khám/ Clinic: @RoomName </span>
+            </div>
+            <div class="label-group">
+                
+            <span>Mã BN/ PID:@PatientHospitalID </span>
+            </div>
+            <div class="label-group">
+                
+            <span>Họ và tên/ Patient's name:@FullName</span>
+            </div>
+            <div class="label-group">
+
+            <span>Ngày giờ đến khám/ Examination date:@ExamineDate</span>
+            </div>
+            <div class="label-group">
+
+            <span>Ngày sinh/ DOB:@DoBName </span>
+            </div>
+            <div class="label-group">
+
+            <span>Tuổi/ Age:@Age </span>
+            </div>
+            <div class="label-group">
+
+            <span>Giới tính/ Gender:@GenderName </span>
+            </div>
+            <div class="label-group">
+            <span>Quốc tịch/ Nationality:@Nationality</span>
+            </div>
+            <div class="label-group">
+
+            <span>Địa chỉ/ Address: @Address </span>
+            </div>
+            <div class="label-group">
+
+            <span>SĐT/ Phone Number:@PhoneNumber </span>
+            </div>
+     </div>
+    
+    <MemoEditAutoSizeWithLibrary CategoryName="Lý do đến khám" Enabled="true" />
+
+    <h4 class="bold-text">II. Hỏi BỆNH/MEDICAL INQUIRY</h4>
+    <label>Lý do đến khám/ Chief complaint</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Lý do đến khám" Enabled="true" />
+    <label>Quá trình bệnh lý/ History of present illness</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Quá trình bệnh lý" Enabled="true" />
+    <h4 class="bold-text">Tiền sử bệnh/history</h4>
+    <label>Tiền sử bệnh cá nhân/ Personal medical history</label>
+@*      <MemoEditAutoSizeWithLibrary CategoryName="Tiền sử bệnh - Tiền sử cá nhân" @bind-Value="@PersonalHistory" Enabled="false" />
+ *@    <label>Dị ứng/ Allergies</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Tiền sử bệnh - Dị ứng" Enabled="true" />
+    <label>Tiền sử nội khoa/ Medical history</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Tiền sử bệnh - Tiền sử nội khoa" Enabled="true" />
+    <label>Tiền sử ngoại khoa/ Surgical history</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Tiền sử bệnh - Tiền sử ngoại khoa" Enabled="true" />
+    <label>Thuốc đang dùng/ Medication history</label>
+    <UcLichSuDonThuoc Enabled="true" />
+   
+    <label>Tiền sử gia đình/ Family medical history</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Tiền sử bệnh - Tiền sử gia đình" Enabled="true" />
+    <h4 class="bold-text">III. KHÁM LÂM SÀNG/PHYSICAL EXAMINATION </h4>
+    <label class="bold-text">Chỉ số sinh hiệu/ Vital Index</label>
+    <UcVitalSignBilingual Pulse="@Pulse" BloodPressure="@BloodPressure" BMI="@BMI" Breath="@Breath" Height="@Height" Weight="@Weight" />
+    <label>Toàn thân/ General condition</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Khám lâm sàng - Toàn thân" Enabled="true" />
+    <label>Các bộ phận/ Review of systems</label>
+    <MemoEditAutoSizeWithLibrary CategoryName="Khám lâm sàng - Các bộ phận" Enabled="true" />
+    <h4 class="bold-text">IV. CẬN LÂM SÀNG/ LABOTARY TESTING AND IMAGING</h4>
+    <div>
+             @* <ucKetQuaCLS Enabled="false" /> *@ 
+    </div>
+    <label>V. CHẨN ĐOÁN/ DIAGNOSIS (Mã chuẩn đoán theo ICD-10/ ICD-10 Code)</label>
+    <label>VI. XỬ TRÍ/ TREATMENT</label>
+    <label>- Xử trí:</label>
+    <div class="panel">
+    <MemoEditAutoSizeWithLibrary CategoryName="Xử trí khác" Enabled="true" />        
+<label>- Xử trí khác:</label>
+    </div>
+    <label>Thông tin phiếu khám bệnh/ Examination Information</label>
+    <div class="panel">
+        @* <DxDateEdit @bind="@DocumentDate" Enabled="false" /> *@
+        @* <DxGridLookup Enabled="false" DisplayMember="FullNameWithTechniqueCode" ValueMember="UserID" /> *@
+        <label>Thời gian tạo phiếu/ Created Date</label>
+        <label>Bác sĩ khám/ Doctor</label>
+    </div>
+</div>
